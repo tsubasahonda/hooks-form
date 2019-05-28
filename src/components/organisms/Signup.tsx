@@ -1,5 +1,5 @@
-import React from 'react';
-import useSignUpForm from './CustomHooks';
+import * as React from 'react';
+import useSignUpForm from '../../CustomHooks';
 
 const Signup = () => {
   const { inputs, handleInputChange, handleSubmit } = useSignUpForm(); 
@@ -21,7 +21,7 @@ const Signup = () => {
       </div>
       <div>
         <label>Re-enter Password</label>
-        <input type="password" onChange={handleInputChange} value={inputs.passwrod2} anem="password2" />
+        <input type="password" onChange={handleInputChange} value={inputs.passwrod2} name="password2" />
       </div>
       <button type="submit">Sign Up</button>
     </form>
