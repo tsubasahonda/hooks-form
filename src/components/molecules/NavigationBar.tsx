@@ -11,7 +11,7 @@ type OwnProps = {
 
 type Props = OwnProps;
 
-const component: React.SFC<Props> = (props: Props) => {
+const component: React.FC<Props> = (props: Props) => {
   return (
     <ul className={props.className}>
       {

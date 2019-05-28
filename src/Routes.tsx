@@ -5,7 +5,7 @@ import Home from './components/pages/Home';
 import About from './components/pages/About';
 import NavigationBar from './components/molecules/NavigationBar';
 
-const component: React.SFC = () => {
+const component: React.FC = () => {
   return (
     <BrowserRouter>
       <div>
