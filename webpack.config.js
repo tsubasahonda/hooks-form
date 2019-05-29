@@ -1,5 +1,5 @@
-const path = require('path');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const path = require('path'); // eslint-disable-line
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -10,12 +10,12 @@ module.exports = {
     compress: true,
   },
   output: {
-    path: __dirname + '/dist',
+    path: `${__dirname}/dist`,
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js'],
   },
   module: {
     rules: [
@@ -23,15 +23,15 @@ module.exports = {
         test: /\.(ts|tsx)?$/,
         exclude: /node_modules/,
         use: {
-          loader: "ts-loader"
-        }
-      }
-    ]
+          loader: 'ts-loader',
+        },
+      },
+    ],
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
-    })
-  ]
+      template: './src/index.html',
+      filename: './index.html',
+    }),
+  ],
 };

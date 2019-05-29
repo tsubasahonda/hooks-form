@@ -1,13 +1,11 @@
 import * as React from 'react';
 import Signup from '../organisms/Signup';
 
-const component: React.FC = () => {
-  return (
-    <div>
+const component: React.FC = () => (
+  <div>
       There is Home.
-      <Signup/>
-    </div>
-  )
-};
+    <Signup />
+  </div>
+);
 
 export default component;

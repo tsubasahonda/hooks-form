@@ -12,17 +12,16 @@ type OwnProps = {
 type Props = OwnProps;
 
 const component: React.FC<Props> = (props: Props) => {
+  const { className, items } = props;
   return (
-    <ul className={props.className}>
+    <ul className={className}>
       {
-        props.items.map((e, i) => {
-          return (
-            <li key={e.to}>
-              <Link to={e.to}>{e.display}</Link>
-            </li>
-          )
-        })
-      }
+      items.map(e => (
+        <li key={e.to}>
+          <Link to={e.to}>{e.display}</Link>
+        </li>
+      ))
+    }
     </ul>
   );
 };
